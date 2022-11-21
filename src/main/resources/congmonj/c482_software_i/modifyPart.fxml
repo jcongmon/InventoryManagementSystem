@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="congmonj.c482_software_i.controller.modifyPartController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="600.0">
+                    <children>
+                        <Label maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="110.0" text="Modify Product">
+                            <font>
+                                <Font name="Arial Bold" size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="50.0" top="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <RadioButton fx:id="modifyPartInHouseRadioBtn" mnemonicParsing="false" onAction="#onActionInHouse" text="In-House">
+                            <HBox.margin>
+                                <Insets left="50.0" top="20.0" />
+                            </HBox.margin>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="partSourcing" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="modifyPartOutsourcedRadioBtn" layoutX="78.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionOutsourced" text="Outsourced" toggleGroup="$partSourcing">
+                            <HBox.margin>
+                                <Insets left="50.0" top="20.0" />
+                            </HBox.margin>
+                        </RadioButton>
+                    </children>
+                </HBox>
+                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="600.0">
+                    <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="600.0">
+                            <children>
+                                <HBox prefHeight="50.0" prefWidth="600.0">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="Part ID">
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="50.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="partIdTxt" editable="false" opacity="0.6">
+                                            <HBox.margin>
+                                                <Insets left="75.0" top="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="10.0" layoutY="20.0" prefHeight="50.0" prefWidth="600.0">
+                                    <children>
+                                        <Label text="Part Name">
+                                            <HBox.margin>
+                                                <Insets left="50.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="partNameTxt">
+                                            <HBox.margin>
+                                                <Insets left="54.0" top="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="10.0" layoutY="70.0" prefHeight="50.0" prefWidth="600.0">
+                                    <children>
+                                        <Label text="Inventory">
+                                            <HBox.margin>
+                                                <Insets left="50.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="partInventoryTxt">
+                                            <HBox.margin>
+                                                <Insets left="60.0" top="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="10.0" layoutY="120.0" prefHeight="50.0" prefWidth="600.0">
+                                    <children>
+                                        <Label text="Cost">
+                                            <HBox.margin>
+                                                <Insets left="50.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="partCostTxt">
+                                            <HBox.margin>
+                                                <Insets left="85.0" top="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="10.0" layoutY="120.0" prefHeight="50.0" prefWidth="600.0">
+                                    <children>
+                                        <Label text="Max">
+                                            <HBox.margin>
+                                                <Insets left="50.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="partMaxTxt">
+                                            <HBox.margin>
+                                                <Insets left="88.0" top="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                        <Label layoutX="90.0" layoutY="25.0" text="Min">
+                                            <HBox.margin>
+                                                <Insets left="25.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="partMinTxt" layoutX="154.0" layoutY="20.0">
+                                            <HBox.margin>
+                                                <Insets left="30.0" top="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="10.0" layoutY="120.0" prefHeight="50.0" prefWidth="600.0">
+                                    <children>
+                                        <Label fx:id="toggleLbl" maxWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" text="Machine ID">
+                                            <HBox.margin>
+                                                <Insets left="50.0" top="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="toggleTxt">
+                                            <HBox.margin>
+                                                <Insets left="12.0" top="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                            </children></VBox>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="600.0" spacing="5.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onActionSave" text="Save">
+                            <HBox.margin>
+                                <Insets left="450.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionCancel" text="Cancel" />
+                    </children></HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
